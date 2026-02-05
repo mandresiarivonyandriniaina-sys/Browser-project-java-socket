@@ -16,7 +16,7 @@ public class HttpResponse {
             String[] parties = reponseBrute.split("\r\n\r\n", 2);
             String[] lignesEntete = parties[0].split("\r\n");
 
-            // Parsing de la ligne de statut (ex: HTTP/1.1 200 OK)
+            // Parsing de la ligne de statut
             String[] premiereLigne = lignesEntete[0].split(" ", 3);
             if (premiereLigne.length >= 2) {
                 this.codeStatut = Integer.parseInt(premiereLigne[1]);
@@ -31,7 +31,7 @@ public class HttpResponse {
                 }
             }
 
-            // Récupération du corps HTML
+            // Récupération HTML
             if (parties.length > 1) {
                 this.corpsHTML = parties[1];
             }
