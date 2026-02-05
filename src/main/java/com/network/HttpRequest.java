@@ -14,7 +14,7 @@ public class HttpRequest {
         this.url = url;
         this.entetes = new HashMap<>();
         this.corps = "";
-        // Entêtes par défaut pour un navigateur
+        // Entêtes
         this.entetes.put("User-Agent", "JavaBrowser/1.0");
         this.entetes.put("Accept", "text/html");
         this.entetes.put("Connection", "close");
